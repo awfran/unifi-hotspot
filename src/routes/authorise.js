@@ -23,6 +23,9 @@ module.exports = function () {
           requestOptions.uri = `${process.env.URI}/api/s/${process.env.SITENAME}/cmd/stamgr`
           requestOptions.body = {
             cmd: 'authorize-guest',
+            minutes: '',
+            up:'',
+            down:'',
             mac: req.session.macAddr
           }
           return request(requestOptions)
